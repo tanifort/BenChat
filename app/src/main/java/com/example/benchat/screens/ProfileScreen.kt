@@ -54,7 +54,7 @@ fun ProfileScreen() {
                     Column(
                         horizontalAlignment = Alignment.Start
                     ) {
-                        Text(text = "Content Top", modifier = Modifier.padding(bottom = 30.dp))
+                        Text(text = "Content Top", modifier = Modifier.padding(bottom = 20.dp))
 
                         Image(painter = painterResource(id = R.drawable.ic_launcher_background ) ,
                             contentDescription = "Image",
@@ -75,7 +75,7 @@ fun ProfileScreen() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ){
 
-                    Text(text = "Content Bottom")
+                    Text(text = "John Kendey", modifier = Modifier.padding(bottom = 10.dp).weight(2F))
                     Text(buildAnnotatedString {
                         append("Lorem ipsum, bla bla FM!")
                         append("Lorem ipsum, bla bla FM!")
