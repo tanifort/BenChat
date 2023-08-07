@@ -1,4 +1,4 @@
-package com.example.benchat.screens
+package com.example.benchat.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -21,9 +21,13 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
+
+//TODO: Use Google login service instead.
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     // local States
     var email by remember {
         mutableStateOf(TextFieldValue(""))
@@ -41,7 +45,9 @@ fun LoginScreen() {
             .weight(1F)){
 
             Column(
-                modifier = Modifier.fillMaxWidth().padding(top = 45.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 45.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
@@ -217,5 +223,6 @@ fun LoginScreen() {
 @Preview
 @Composable
 fun PreviewLoginScreen() {
- LoginScreen()
+    val navController= rememberNavController()
+ LoginScreen(navController = navController)
 }
