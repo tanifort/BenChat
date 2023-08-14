@@ -1,6 +1,4 @@
 package com.example.benchat.infrastructure.dataAccess.sharedPreference
-
-
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -12,8 +10,9 @@ import io.ktor.utils.io.errors.IOException
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
+
 private const val USER_PREFERENCES = "user_preferences"
-class DataStoreManager @Inject constructor(@ApplicationContext private val context: ApplicationContext)  {
+class DataStoreManager @Inject constructor(@ApplicationContext private val context: Context)  {
 
     private val Context.dataStore : DataStore<Preferences> by preferencesDataStore(USER_PREFERENCES)
 

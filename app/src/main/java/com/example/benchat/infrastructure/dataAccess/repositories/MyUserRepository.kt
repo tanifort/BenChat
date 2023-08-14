@@ -1,6 +1,5 @@
 package com.example.benchat.infrastructure.dataAccess.repositories
 
-import com.example.benchat.domain.entities.MyUser
 import com.parse.ParseQuery
 import javax.inject.Inject
 
