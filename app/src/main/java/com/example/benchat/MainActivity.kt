@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.benchat.ui.navigations.HomeScreen
+import com.example.benchat.ui.navigations.bottonNavigation.HomeScreen
 import com.example.benchat.ui.theme.BenChatTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,6 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             BenChatTheme {
                 // A surface container using the 'background' color from the theme
+                //AppNavigation()
 
             }
         }

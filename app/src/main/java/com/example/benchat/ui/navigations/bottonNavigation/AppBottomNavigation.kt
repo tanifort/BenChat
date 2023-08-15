@@ -1,4 +1,4 @@
-package com.example.benchat.ui.navigations
+package com.example.benchat.ui.navigations.bottonNavigation
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -26,11 +26,11 @@ import com.example.benchat.ui.theme.Purple200
 @Composable
 fun AppBottomNavigation(navController: NavController) {
     val screens = listOf(
-        BottomNavItem.Home,
-        BottomNavItem.Settings,
-        BottomNavItem.Profile,
-        BottomNavItem.Message,
-        BottomNavItem.Accounts
+        BottomNavScreen.Home,
+        BottomNavScreen.Settings,
+        BottomNavScreen.Profile,
+        BottomNavScreen.Message,
+        BottomNavScreen.Accounts
     )
 
     val  navStackBackEntry by navController.currentBackStackEntryAsState();
@@ -53,7 +53,7 @@ fun AppBottomNavigation(navController: NavController) {
 
 @Composable
 fun RowScope.AddItem(
-    screen: BottomNavItem,
+    screen: BottomNavScreen,
     currentDestination: NavDestination?,
     navController: NavController
 ) {

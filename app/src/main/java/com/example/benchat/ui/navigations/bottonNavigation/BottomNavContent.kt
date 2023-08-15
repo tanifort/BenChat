@@ -1,4 +1,4 @@
-package com.example.benchat.ui.navigations
+package com.example.benchat.ui.navigations.bottonNavigation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
